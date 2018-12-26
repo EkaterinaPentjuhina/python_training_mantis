@@ -1,0 +1,20 @@
+[
+  {
+    "py/object": "model.project.Project",
+    "description": "descriptionx",
+    "id": null,
+    "igc": true,
+    "name": "nameP0hC r",
+    "status": "obsolete",
+    "view_status": "public"
+  },
+  {
+    "py/object": "model.project.Project",
+    "description": "descriptioni",
+    "id": null,
+    "igc": true,
+    "name": "namegI A",
+    "status": "obsolete",
+    "view_status": "private"
+  }
+]
