@@ -1,9 +1,13 @@
+from model.project import Project
+
 
 def test_add_project(app, json_project, db):
+    username = "administrator"
+    password = "root"
     project = json_project
-    old_projects = db.get_project_list()
+    old_projects = app.soap.get_project_list(username, password)
     app.project.add_project(project)
-    new_projects = db.get_project_list()
+    new_projects = app.soap.get_project_list(username, password)
+    assert len(old_projects) + 1 == len(new_projects)
     old_projects.append(project)
-    assert old_projects == new_projects
-
+    assert sorted(old_projects, key=Project.id_or_max) == sorted(new_projects, key=Project.id_or_max)
